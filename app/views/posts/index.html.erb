@@ -1,6 +1,9 @@
 <% @posts.each do |post| %>
-  <h2><%= post.title %></h2>
-  <div><%= truncate(post.body, :length => 250) %></div>
+  <div class="post_wrapper">
+  <h2><%= link_to post.title, post %></h2>
+  <p><%= post.created_at.strftime("%B %d, %Y") %></p>
+  <p><%= truncate(post.body, :length => 250) %></p>
+  </div>
   <br>
   <%= link_to "Read Post", post %>
 <% end %>
