@@ -1,3 +1,4 @@
+<div id="page_wrapper">
 <% @posts.each do |post| %>
   <div class="post_wrapper">
   <h2><%= link_to post.title, post %></h2>
@@ -5,5 +6,6 @@
   <p><%= truncate(post.body, :length => 250) %></p>
   </div>
   <br>
-  <%= link_to "Read Post", post %>
+  <button><%= link_to "Read Post", post %></button>
 <% end %>
+</div>
